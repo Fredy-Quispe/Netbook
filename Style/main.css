@@ -1,58 +1,82 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
     2. Remove default margin
   */
-  * {
-    margin: 0;
-  }
-  /*
+* {
+  margin: 0;
+}
+
+/*
     3. Allow percentage-based heights in the application
   */
-  html, body {
-    height: 100%;
-  }
-  /*
+html,
+body {
+  height: 100%;
+}
+
+/*
     Typographic tweaks!
     4. Add accessible line-height
     5. Improve text rendering
   */
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
-  /*
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
     6. Improve media defaults
   */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
     7. Remove built-in form typography styles
   */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
     8. Avoid text overflows
   */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  /*
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
     9. Create a root stacking context
   */
-  #root, #__next {
-    isolation: isolate;
-  }
+#root,
+#__next {
+  isolation: isolate;
+}
 
 
-:root{
+:root {
   /* --color-primary: #217BF4; */
   --color-primary: rgb(33, 123, 244);
   --color-primary-10: rgba(33, 123, 244, 0.1);
@@ -68,7 +92,12 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--color-heading);
 }
 
@@ -122,18 +151,20 @@ p.section__subtitle {
   margin: 0 auto;
 }
 
-.card.rating .card__title, .card.awards .card__title {
+.card.rating .card__title,
+.card.awards .card__title {
   display: flex;
   gap: 8px;
   margin-bottom: 32px;
 }
 
-.card__subtitle, .card__subtitle {
+.card__subtitle,
+.card__subtitle {
   display: flex;
   align-items: center;
 }
 
-.card__avatars  {
+.card__avatars {
   display: inline-flex;
   margin-right: 16px;
 }
@@ -294,10 +325,11 @@ p.section__subtitle {
   grid-template-columns: 340px 340px 1fr;
   gap: 24px;
   align-items: center;
+  margin-bottom: 96px;
 }
 
 .achievement .card {
-  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to bottom, rgba(185, 185, 185, 0.44), rgba(94, 94, 94, 0.58)) border-box ;
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(to bottom, rgba(185, 185, 185, 0.44), rgba(94, 94, 94, 0.58)) border-box;
   border: 1px solid transparent;
   border-radius: 16px;
   padding: 48px 18px 40px 40px;
@@ -328,7 +360,7 @@ p.section__subtitle {
 }
 
 .achievement .card__subtitle b {
-  color: var(--color-primary); 
+  color: var(--color-primary);
 }
 
 .achievement .card__content {
@@ -346,12 +378,20 @@ p.section__subtitle {
 
 .community {
   background: linear-gradient(0deg, rgba(241, 246, 253, 0) 1.63%, #F1F6FD 20.5%, #F1F6FD 58.57%, #FFFFFF 100%);
+  padding: 80px 0;
+  margin-bottom: 120px;
 }
 
 .community__items {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(522px , 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(522px, 1fr));
   gap: 40px;
+}
+
+.community__content {
+  text-align: center;
+  width: 448px;
+  margin: 0 auto 64px;
 }
 
 .community__card {
@@ -364,10 +404,6 @@ p.section__subtitle {
   gap: 24px;
 }
 
-.community__card-content {
-
-}
-
 .community__card-icon {
   display: flex;
   align-items: center;
@@ -378,17 +414,96 @@ p.section__subtitle {
   border-radius: 24px;
 }
 
-.community__members .community__card-icon, .community__custom .community__card-icon {
+.community__members .community__card-icon,
+.community__custom .community__card-icon {
   background: linear-gradient(154.49deg, #5CA1FE 6.61%, #217BF4 89.72%);
   box-shadow: 0px 10px 22px -2px rgba(109, 171, 255, 0.36);
 }
 
-.community__groups .community__card-icon, .community__builder .community__card-icon {
+.community__groups .community__card-icon,
+.community__builder .community__card-icon {
   background: linear-gradient(154.49deg, #FF858A 6.61%, #F04148 89.72%);
   box-shadow: 0px 8px 22px -2px rgba(248, 87, 94, 0.3);
 }
 
-.community__forum .community__card-icon, .community__scroll .community__card-icon {
+.community__forum .community__card-icon,
+.community__scroll .community__card-icon {
   background: linear-gradient(154.49deg, #FFD085 6.61%, #FFAF2E 89.72%);
   box-shadow: 0px 10px 22px -2px rgba(250, 186, 84, 0.3);
+}
+
+.members__content  {
+  width: 450px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.members__tabs {
+  background-color: var(--color-primary-10);
+  width: 450px;
+  margin: 40px auto;
+  display: flex;
+  border-radius: 16px;
+  padding: 8px;
+}
+
+.members__tab {
+  height: 56px;
+  display: inline-flex;
+  padding: 0 32px;
+  align-items: center;
+  border: 0;
+  border-radius: 8px;
+  background-color: transparent;
+  flex-grow: 1;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.members__tab:hover {
+  color: var(--color-primary);
+}
+
+.members__tab--active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.members__members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.members__member-card {
+  text-align: center;
+  border: solid 1px #F3F3F3;
+  border-radius: 16px;
+  transition: box-shadow 200ms ease-in-out, transform 20ms ease-in-out;
+  padding: 32px;
+}
+
+.members__member-card:hover {
+  box-shadow: 0px 26px 49px rgba(146, 165, 184, 0.24);
+  transform: translate(-4px, -4px);
+}
+
+.members__member-picture {
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.members__member-avatar {
+  display: inline-block;
+  position: relative;
+}
+
+.members__member-name {
+  font-size: 24px;
+}
+.members__member-username {
+  font-size: 16px;
 }
